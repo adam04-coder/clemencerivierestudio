@@ -1,0 +1,256 @@
+/* VARIABLES */
+
+:root {
+    --ivoire: #F7F4EE;
+    --lin: #E7E0D5;
+    --pierre: #B7AA98;
+    --encre: #252823;
+    --bronze: #806447;
+    --olive: #626854;
+    --argile: #9B6555;
+    --blanc: #FFFFFF;
+}
+
+
+/* BASE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--ivoire);
+    color: var(--encre);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+h1 em, h2 em {
+    color: var(--bronze);
+    font-weight: 400;
+}
+
+.eyebrow {
+    display: block;
+    color: var(--olive);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.section {
+    padding: 110px 80px;
+}
+
+.section-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--bronze);
+    border-bottom: 1px solid var(--pierre);
+    padding-bottom: 18px;
+    margin-bottom: 65px;
+}
+
+.section-heading {
+    margin-bottom: 65px;
+}
+
+.section-heading h2 {
+    font-size: 54px;
+    line-height: 1.05;
+}
+
+
+/* HEADER */
+
+.header {
+    height: 95px;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--ivoire);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(183, 170, 152, 0.4);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.logo-symbol {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 43px;
+    color: var(--bronze);
+}
+
+.logo strong {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1.6px;
+}
+
+.logo small {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 1.4px;
+    margin-top: 5px;
+    color: var(--olive);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.navigation a {
+    font-size: 12px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--bronze);
+}
+
+.navigation .nav-contact {
+    border-bottom: 1px solid var(--bronze);
+    padding-bottom: 7px;
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 25px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.button-primary {
+    background: var(--bronze);
+    color: var(--ivoire);
+}
+
+.button-primary:hover {
+    background: var(--encre);
+}
+
+.button-secondary {
+    border: 1px solid var(--pierre);
+    color: var(--encre);
+}
+
+.button-secondary:hover {
+    background: var(--encre);
+    color: var(--ivoire);
+    border-color: var(--encre);
+}
+
+.button-light {
+    background: var(--ivoire);
+    color: var(--encre);
+}
+
+.button-light:hover {
+    background: var(--bronze);
+    color: var(--ivoire);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--bronze);
+    outline-offset: 3px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 680px;
+    height: calc(100vh - 95px);
+    max-height: 850px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg,
+        rgba(247,244,238,0.97) 0%,
+        rgba(247,244,238,0.88) 40%,
+        rgba(247,244,238,0.12) 100%),
+        url("images/accueil.jpg")
+        center/cover;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 700px;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 6vw, 86px);
+    margin-bottom: 30px;
+}
+
+.hero-content p {
+    max-width: 480px;
+    color: var(--olive);
+    margin-bottom: 35px;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--olive);
+    z-index: 2;
+}
